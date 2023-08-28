@@ -1,0 +1,27 @@
+.festas {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__inner {
+        & > img {
+            height: auto;
+            width: 100%;
+        }
+
+        & > h3 {
+            color: var(--color-5);
+            text-transform: uppercase;
+        }
+
+        & > p {
+            color: var(--color-3);
+        }
+    }
+}
+
+@media(max-width: 26.563rem) {
+    .festas {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

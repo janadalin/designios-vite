@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+  --color-1: hsla(0, 1%, 96%, .9);
+  --color-2: hsla(38, 100%, 69%, .8);
+  --color-3: hsla(0, 0%, 0%, .6);
+  --color-4: hsla(23, 83%, 65%, .8);
+  --color-5: hsla(34, 4%, 31%, 1);
+  --color-6: hsla(40, 1.71%, 65.69%, 1);
+  --color-7: hsla(34.29, 4.4%, 31.18%, 1);
+  --color-8: hsla(40, 4.29%, 27.45%, 1);
+  --color-9: hsla(0, 100%, 70%, .8);
+  --color-10: hsla(34.74, 61.29% ,93.92%, 1);
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.border {
+  border: .063rem solid hsla(38.25, 82.47%, 61.96%, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, button {
+  font-family: 'Lora', serif;
+  font-size: calc(15px + 0.390625vw);
+}

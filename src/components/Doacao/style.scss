@@ -1,0 +1,21 @@
+@import '../../App.scss';
+
+.doacao {
+    @extend .flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    & > p {
+        color: var(--color-3);
+        text-align: center;
+
+        & > span {
+            cursor: pointer;            
+        }
+    }
+
+    & > img {
+        height: auto;
+        width: 12rem;
+    }
+}

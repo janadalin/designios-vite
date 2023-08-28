@@ -1,0 +1,19 @@
+.versiculos {
+    text-align: justify;
+
+    & > span {
+        color: var(--color-3);
+        line-height: 1.4;
+
+        & > sup {
+            color: var(--color-9);
+            font-weight: bold;
+        }
+    }
+}
+
+@media(max-width: 26.563rem) {
+    .versiculos {
+        text-align: left;
+    }
+}

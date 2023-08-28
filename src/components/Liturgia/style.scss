@@ -1,0 +1,22 @@
+@import '../../App.scss';
+
+.liturgia {
+    display: grid;
+
+    &__calendar {
+        justify-self: end;
+        padding: 1rem 0;
+    }
+
+    &__text {
+        color: var(--color-3);
+    }
+}
+
+.button__calendar {
+    @extend .border;
+    background-color: var(--color-2);
+    color: var(--color-3);
+    cursor: pointer;
+    padding: .25rem .5rem;
+}

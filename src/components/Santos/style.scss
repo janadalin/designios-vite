@@ -1,0 +1,49 @@
+@import '../../App.scss';
+
+.santos {
+    color: var(--color-3);
+
+    &__inner {
+        @extend .flex;
+        padding-bottom: 1rem;
+    }
+
+    &__summary {
+        height: auto;
+        text-align: justify;
+        width: 70%;
+
+        & > h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    &__image {
+        height: 100%;
+        padding-right: .5rem;
+        width: 30%;
+
+        > img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.w-100 {
+    width: 100%;
+}
+
+@media(max-width: 26.563rem) {
+    .santos {
+        &__inner {
+            flex-direction: column;
+        }
+
+        &__summary, &__image {
+            text-align: left;
+            width: 100%;
+        }
+    }
+}
+    

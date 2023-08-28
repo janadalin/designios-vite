@@ -1,0 +1,18 @@
+.palavra__details {
+    color: var(--color-3);
+    line-height: 1.6;
+    text-align: justify;
+    /*
+    &::first-letter {
+        color: var(--color-9);
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    */
+}
+
+@media(max-width: 26.563rem) {
+    .palavra__details {
+        text-align: left;
+    }
+}

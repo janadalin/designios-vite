@@ -1,0 +1,89 @@
+@import '../../App.scss';
+
+$height: 12vh;
+
+.header {
+    @extend .flex;
+    background-color: var(--color-1);
+    height: auto;
+    width: 100%;
+    z-index: 1;
+
+    &__inner {
+        @extend .flex;
+        height: $height;
+        justify-content: space-between;
+        width: 60%;
+    }
+
+    &__nav {
+        &__menu {
+            @extend .flex;
+            gap: .5rem;
+            list-style: none;
+
+            &__link {
+                color: var(--color-3);
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &.active {
+                    color: var(--color-3) !important;
+                    background-color: var(--color-2);
+                    padding: .25rem .5rem;
+                }
+
+                &:hover {
+                    color: var(--color-4);
+                }
+            }
+        }
+    }
+
+    &__hamburguer {
+        display: none;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        height: 0;
+        opacity: .4;
+    }
+
+    to {
+        height: calc(100vh - $height);
+        opacity: 1;
+    }
+}
+
+@media(max-width: 26.563rem) {
+    .header {
+        &__inner {
+            width: 85%;
+        }
+
+        &__nav {
+            &__menu {
+                background-color: var(--color-1);
+                flex-direction: column;
+                height: 0;
+                left: 0;
+                overflow: hidden;
+                position: absolute;
+                top: $height;
+                width: 100%;
+
+                &.active {
+                    animation: slideDown 1.4s ease-in;
+                    animation-fill-mode: forwards;
+                }
+            }
+        }
+
+        &__hamburguer {
+            cursor: pointer;
+            display: block;
+        }
+    }
+}

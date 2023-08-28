@@ -1,0 +1,60 @@
+@import '../../App.scss';
+
+.carousel {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+
+    &__slide {
+        display: none;
+
+        & > img {
+            height: 100vh;
+            width: 100%;
+        }
+
+        &__text {
+            @extend .flex;
+            color: var(--color-1);
+            flex-direction: column;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            & > p {
+                background-color: var(--color-3);
+                font-size: 2rem;
+                max-width: 80%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade {
+    animation: fade 1.4s ease-in-out;
+    display: block;
+}
+
+@media(max-width: 26.563rem) {
+    .carousel {
+        &__slide {
+            &__text {
+                & > p {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}

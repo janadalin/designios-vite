@@ -1,0 +1,29 @@
+@import '../../../App.scss';
+
+.list {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style: none;
+
+    &__item {
+        //border: .063rem solid var(--color-2);
+        @extend .border;
+        color: var(--color-3);
+        cursor: pointer;
+        margin-bottom: 1rem;
+        padding: .4rem .2rem;
+        
+        &:nth-child(odd) {
+            background-color: var(--color-2);
+        }
+    }
+}
+
+@media(max-width: 26.563rem) {
+    .list {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+}

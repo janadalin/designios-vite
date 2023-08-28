@@ -1,0 +1,29 @@
+@import '../../../App.scss';
+
+.palavra__resume {
+    @extend .flex;
+    justify-content: space-between !important;
+    padding: 1rem 0;
+
+    & > h3 {
+        color: var(--color-3);
+        text-transform: uppercase;
+    }
+
+    &__link {
+        @extend .border;
+        background-color: var(--color-2);
+        color: var(--color-3);
+        padding: .25rem .5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+@media(max-width: 26.563rem) {
+    .palavra__resume {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
